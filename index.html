@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Profile</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap"> <!-- Matrix-style font -->
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'VT323', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #000; /* Black background */
+            color: #00ff00; /* Neon green text */
+            overflow: hidden;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background-color: #0a0a0a; /* Slightly lighter black */
+            border: 1px solid #00ff00;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease forwards;
+            color: #00ff00;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(0, 255, 0, 0.2), transparent);
+            animation: scan 5s linear infinite;
+        }
+
+        /* Profile Image */
+        .profile-card img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 3px solid #00ff00;
+            animation: glitch 1.5s infinite;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 10px 0;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        p.title, p.bio {
+            color: #00cc00;
+        }
+
+        /* Glitch Effect */
+        @keyframes glitch {
+            0%, 100% { clip-path: inset(0); }
+            10%, 30%, 50% { clip-path: inset(0 0 25% 0); }
+            20%, 40%, 60% { clip-path: inset(75% 0 0 0); }
+        }
+
+        /* Contact Button */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #00ff00;
+            color: #000;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 8px #00ff00;
+        }
+
+        /* Social Links */
+        .social-links a {
+            margin: 0 10px;
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #00cc00;
+            transform: translateY(-5px);
+        }
+
+        /* Keyframes for Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Flicker Animation */
+        .profile-card, h1, p, .button, .social-links a {
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="C:\Users\SAHED\OneDrive\Desktop\full website\sahed.gif" alt="Your Profile Picture"> <!-- Updated image source -->
+        <h1>SHAHED MSD</h1>
+        <p class="title">Cyber Warrior</p>
+        <p class="bio">Hi! I'm SHAHED MSD, a passionate cyber enthusiast. Exploring, learning, hacking... connect with me if you dare!</p>
+
+        <!-- Social media links -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/md-shahed-204989294" target="_blank" aria-label="LinkedIn profile of SHAHED MSD">LinkedIn</a>
+            <a href="https://www.facebook.com/sahed366" target="_blank" aria-label="Facebook profile of SHAHED MSD">Facebook</a>
+        </div>
+
+        <!-- Contact button -->
+        <a href="https://t.me/Sahed_msd" class="button" aria-label="Contact SHAHED MSD via Telegram">Contact Me</a>
+    </div>
+</body>
+</html>
