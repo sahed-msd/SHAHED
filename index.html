@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spy Cam Setup</title>
     <link rel="SHORTCUT ICON" href="https://i68.tinypic.com/65si9x.jpg" type="image/x-icon"/>
     <link href='https://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Sarpanch:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=play" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+  
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
     <style>
         /* Basic Reset */
@@ -21,7 +23,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #000;
+            background-color: #680404;
             color: #e70c0c;
             overflow: hidden;
             position: relative;
@@ -31,7 +33,7 @@
         /* Binary Digit Style */
         .binary-digit {
             position: absolute;
-            font-size: 1em;
+            font-size: 1.5em;
             color: #ea140c;
             opacity: 0;
             animation: fall linear infinite;
@@ -142,97 +144,22 @@
             line-height: 1.5;
         }
 
-        .stars, .twinkling, .clouds {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        .stars {
-            background: url('https://i.imgur.com/8iFjNHd.png') repeat;
-            z-index: 0;
-            animation: moveStars 50s linear infinite;
-        }
-
-        .twinkling {
-            background: url('https://i.imgur.com/3y7Y2fP.png') repeat;
-            z-index: 1;
-            animation: moveTwinkling 100s linear infinite;
-        }
-
-        .clouds {
-            background: url('https://i.imgur.com/4lOZ0pB.png') repeat;
-            z-index: 2;
-            animation: moveClouds 200s linear infinite;
-        }
-
-        @keyframes moveStars {
-            from {background-position: 0 0;}
-            to {background-position: -10000px 5000px;}
-        }
-
-        @keyframes moveTwinkling {
-            from {background-position: 0 0;}
-            to {background-position: -10000px 10000px;}
-        }
-
-        @keyframes moveClouds {
-            from {background-position: 0 0;}
-            to {background-position: 10000px 0;}
-        }
-
-        /* Responsive Design */
-        @media only screen and (max-width: 600px) {
-            .profile-card img {
-                width: 100px;
-                height: 100px;
-            }
-
-            h1 {
-                font-size: 1.5em;
-            }
-
-            .button {
-                padding: 8px 16px;
-                font-size: 0.9em;
-            }
-
-            .message-container .message {
-                font-size: 14px;
-            }
-        }
-
     </style>
 </head>
 <body>
-    <!-- Background Effects -->
-    <div class="stars"></div>
-    <div class="twinkling"></div>
-    <div class="clouds"></div>
-
     <!-- Profile Card -->
     <div class="profile-card">
-        <img src="https://i.imgur.com/zkYlB6y.jpg" alt="Profile picture of SHAHED MSD">
+        <img src="sahed.gif" alt="Profile picture of SHADED MSD">
         <h1>SHAHED MSD</h1>
         <p class="title">Cyber Warrior</p>
         <p class="bio">Hi! I'm SHAHED MSD, a passionate cyber enthusiast. Exploring, learning, hacking... connect with me if you dare!</p>
 
         <div class="social-links">
-            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">Facebook</a>
+            <a href="https://www.linkedin.com/in/md-shahed-204989294" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.facebook.com/sahed366" target="_blank" aria-label="Facebook">Facebook</a>
         </div>
 
         <a href="https://t.me/Sahed_msd" class="button" aria-label="Contact on Telegram">Contact Me</a>
-    </div>
-
-    <!-- Fixed Message Container at the bottom -->
-    <div class="message-container">
-        <p class="message">| We Strike First | We Fuck Hard | We Show No Mercy |</p>
-        <p class="message">#𝓛𝓸𝓛𝓗𝓪𝓬𝓴𝓮𝓭 • 𝓨𝓸𝓾 𝓐𝓻𝓮 𝓗𝓪𝓬𝓴𝓮𝓭 𝓑𝔂 𝓒𝔂𝓫𝓮𝓻 𝓐𝓻𝓶𝔂 <font color="red">𝓚𝓲𝓷𝓰 𝓸𝓯 𝓑𝓪𝓷𝓰𝓵𝓪𝓭𝓮𝓼𝓱</font></p>
-        <p class="message">WE ARE: -= 35H4N S1N6H | PR4JJW4L $HR1V4S74V4 | D3V $H4Rm4 | Sh4d0w Pr0x =-</p>
     </div>
 
     <!-- JavaScript for Binary Rain Effect -->
@@ -246,7 +173,7 @@
             // Randomize properties for variety
             digit.style.left = `${Math.random() * 100}vw`; // Random horizontal position
             digit.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random speed
-            digit.style.fontSize = `${Math.random() * 1 + 0.5}em`; // Random size
+            digit.style.fontSize = `${Math.random() * 1 + 1}em`; // Random size
 
             // Append the binary digit to the body
             document.body.appendChild(digit);
@@ -256,10 +183,29 @@
         }
 
         // Generate binary digits continuously
-        setInterval(createBinaryDigit, 300); // Adjust interval for density of binary digits
+        setInterval(createBinaryDigit, 100); // Adjust interval for density of binary digits
     </script>
 
-    <!-- Background Music -->
+<body>
+  <div class="stars">
+      <center>
+        <h1>𝓒𝔂𝓫𝓮𝓻 𝓐𝓻𝓶𝔂</h1>
+      </center>
+    </div>
+    <div class="twinkling">
+        <div class="container">
+          <div class="text"></div>
+    </body>
+</div>
+<div class="clouds">
+</div>
+
+    <!-- Fixed Message Container at the bottom -->
+    <div class="message-container">
+        <p class="message">| We Strike First | We Fuck Hard | We Show No Mercy |</p>
+        <p class="message">#𝓛𝓸𝓛𝓗𝓪𝓬𝓴𝓮𝓭 • 𝓨𝓸𝓾 𝓐𝓻𝓮 𝓗𝓪𝓬𝓴𝓮𝓭 𝓑𝔂 𝓒𝔂𝓫𝓮𝓻 𝓐𝓻𝓶𝓎 <font color="red">𝓚𝓲𝓷𝓰 𝓸𝓯 𝓑𝓪𝓷𝓰𝓵𝓪𝓭𝓮𝓼𝓱</font></p>
+        <p class="message">WE ARE: -= 35H4N S1N6H | PR4JJW4L $HR1V4S74V4 | D3V $H4Rm4 | Sh4d0w Pr0x =-</p>
+    </div>
     <iframe width="1" height="1" src="https://www.youtube.com/embed/LApS9G22cIU?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
 </body>
 </html>
